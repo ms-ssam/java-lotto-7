@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static lotto.common.WinningRank.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class WinningRankTest {
     @Test
@@ -21,7 +20,7 @@ class WinningRankTest {
         // when
         List<WinningRank> actualWinningRanks = new ArrayList<>();
         for(int i=0; i<expectedWinningRanks.size(); i++) {
-            actualWinningRanks.add(WinningRank.getWinningRank(matchedCounts.get(i),
+            actualWinningRanks.add(WinningRank.determine(matchedCounts.get(i),
                     isMatchedBonusNumbers.get(i)));
         }
 

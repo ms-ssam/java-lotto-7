@@ -40,7 +40,7 @@ public class LottoResult {
         initializeWinningRankInfo();
         for(Lotto lotto : lottos) {
             int matchedCount = getMatchedCount(lotto, winningNumbers);
-            WinningRank winningRank = WinningRank.getWinningRank(matchedCount,
+            WinningRank winningRank = WinningRank.determine(matchedCount,
                     isMatchedBonusNumber(lotto, bonusNumber));
             winningRankInfo.put(winningRank, winningRankInfo.get(winningRank)+1);
         }

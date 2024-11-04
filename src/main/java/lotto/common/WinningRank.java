@@ -23,7 +23,7 @@ public enum WinningRank {
         this.winningAmount = winningAmount;
     }
 
-    public static WinningRank getWinningRank(int matchedCount, boolean isMatchedBonusNumber) {
+    public static WinningRank determine(int matchedCount, boolean isMatchedBonusNumber) {
         return Arrays.stream(values())
                 .filter(rank -> rank.matchedCount == matchedCount &&
                         (rank.isMatchedBonusNumber == isMatchedBonusNumber || !rank.isRequiredBonusNumber))
@@ -47,8 +47,9 @@ public enum WinningRank {
     }
 
     public String getPhraseIfMatchedBonusNumber() {  // *개억지 메서드 + 하드코딩
-        if(isMatchedBonusNumber)
+        if(isMatchedBonusNumber) {
             return ", 보너스 볼 일치";
+        }
         return "";
     }
 }

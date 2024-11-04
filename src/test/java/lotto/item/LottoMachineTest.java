@@ -62,9 +62,9 @@ class LottoMachineTest {
         List<Integer> lottoNumebrs = lottos.getFirst().getNumbers();
         Set<Integer> duplicateRemovedNumbers = new HashSet<>(lottoNumebrs);
 
-        boolean is_duplicated = duplicateRemovedNumbers.size() != lottoNumebrs.size();
+        boolean isDuplicated = duplicateRemovedNumbers.size() != lottoNumebrs.size();
 
         // then
-        Assertions.assertFalse(is_duplicated);
+        Assertions.assertFalse(isDuplicated);
     }
 }

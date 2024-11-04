@@ -9,7 +9,7 @@ import static lotto.common.LottoInfo.LOTTO_PRICE;
 public class UserMoney {
     private int money;
 
-    public UserMoney() {  // *외부에 의미 전달 위해서는 생성자보다 이름 가지도록 정적 팩터리 메서드가 낫나?
+    public UserMoney() {
         money = Integer.parseInt(inputUserMoney());
     }
 
@@ -17,7 +17,7 @@ public class UserMoney {
         return money;
     }
 
-    private String inputUserMoney() {  // *make public? 이런 내부 로직은 숨기는 것이 낫지 않나? -> 정적 팩터리 메서드?
+    private String inputUserMoney() {
         String input;
         while(true) {
             try {
